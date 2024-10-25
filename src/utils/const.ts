@@ -131,7 +131,7 @@ const red = 'rgb(255,0,0)';//大红色
 // If your map has an offset please change this line
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
-export const MAIN_COLOR = green;
+export const MAIN_COLOR = blue;
 export const RUN_COLOR = yellow;
 export const RIDE_COLOR = green;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
