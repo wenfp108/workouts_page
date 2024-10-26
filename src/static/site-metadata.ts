@@ -2,6 +2,7 @@ interface ISiteMetadataResult {
   siteTitle: string;
   siteUrl: string;
   description: string;
+  keywords: string;
   logo: string;
   navLinks: {
     name: string;
@@ -10,18 +11,14 @@ interface ISiteMetadataResult {
 }
 
 const data: ISiteMetadataResult = {
-  siteTitle: 'Running Page',
-  siteUrl: 'https://yihong.run',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+  siteTitle: 'Workouts Map',
+  siteUrl: 'https://app.follow.is/share/users/wenfp108',
+  logo:  'https://i.ibb.co/fxcj8V7/Big-Meow-cats-catsofinstagram-cat-catstagram-instagram-catlover-catlife-catlovers-instacat-kitten-pe.jpg',
   description: 'Personal site and blog',
   navLinks: [
     {
-      name: 'Blog',
-      url: 'https://github.com/yihong0618/gitblog',
-    },
-    {
-      name: 'About',
-      url: 'https://github.com/yihong0618/running_page/blob/master/README-CN.md',
+      name: 'Strava',
+      url: 'https://www.strava.com/athletes/135469581',
     },
   ],
 };
