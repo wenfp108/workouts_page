@@ -8830,5 +8830,37 @@
 "elevation_gain": 10.8,
 "source": "strava",
 "streak": 7
+},
+{
+"run_id": 12802637384,
+"name": "\ud83c\udf19 \u5348\u540e\u884c\u8d70",
+"distance": 1827.4,
+"moving_time": "0:21:22",
+"type": "Hike",
+"start_date": "2024-11-02 09:25:03+00:00",
+"start_date_local": "2024-11-02 17:25:03",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "mi`_E{kc}U]Ny@L_AZ_@B[LwAZQ?WHK?GCKOGi@?oAIi@Am@Ka@G_@AaA@u@IQSGUH[?YIa@Aa@@_@A_B@MIM[UF?DG@FDBHGFDUAOBDD?`@Gb@JJNDB`@Bz@EX_@r@PVJZDRNp@Mh@QtBQd@G|@UdAS`@OH?VXFNCdAJ~@Lf@HNDh@C\\DRBVA`A",
+"average_heartrate": 92.7,
+"average_speed": 1.425,
+"elevation_gain": 4.4,
+"source": "strava",
+"streak": 8
+},
+{
+"run_id": 12805598229,
+"name": "\ud83c\udf2b\ufe0f \u665a\u95f4\u9a91\u884c",
+"distance": 19440.4,
+"moving_time": "1:03:30",
+"type": "Ride",
+"start_date": "2024-11-02 14:05:14+00:00",
+"start_date_local": "2024-11-02 22:05:14",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "iy__Eygc}U`@ILGJUBQ?_@MqCCgCUgI@eBD]JMVOfBm@`C_ArBk@NCLBHHFVBdCj@pHZ|CPdDDbBf@|IXfCZhFNfDZ~EFbBEl@YjAMZUb@Y^a@TuCtAqCfA}G~BoCr@{Cl@kC\\iF`@uBFiANmFHeC?uACcDMcAIyD[mBSeF[k@G[MQCWCsA?iAQgE_@cAEcDYgAKg@IBAS?u@G_BSqMgAcAOaDScDYsAEwG_@iCKIAEEEIAOBaDCiAFyKKyAAiBDqCDw@B}BB{@EiBDcIAaIDwCCoDBiBAkCEkDFmDB{T@YFYK_AC}GQcLc@kMs@iL@GA?QcBMuBWmCy@iHCcAYgAKqAqBqQGc@U}@m@sF[qDeBsOc@}CWiC}A_NQ}@a@{D@]JM`Cq@VGRARFHR@HETON_ATgBh@_ARcBn@sA\\eEtA_@Jg@Dm@VoA\\{Bv@YDOGMOK]oAsJOyACy@]iB{@mHq@sG?_@LSJGTGhO}Ad@Bb@TTXN^z@hIf@zDFt@V|AZrDVlBD|@\\nCLbAZhBl@xFp@lF@REZA@ZnAJl@\\lCdC|TtChVXfCJbB~@bHl@xG?LCHIFMDsH~@i@JwBV{Eh@yAZ]@B?N`AZfAFb@RzBPdCVbCPtC@rEE~C?pCGdG@@Ah@DpBG~O?nFEjA?dAAx@J`CLrJDxDHxE@hDFzD?dBZ~JXxGDn@DBFCBE@Sa@uGQaFAo@@cB@QBENCt@?nBClEAb@BA@LCfA?z@BjAJxBFz@FpA?lAE|DHbET|ANT?DABIMw@AY?{DE}E?UFSJMFAN?vDv@zARzFd@tDTtBXNFRPNFxBh@d@PD?REd@URMJSJoB?WHa@FCxCTx@NdAG`@@pFr@pFj@ZGDGTwBRiAFk@@EHEdBPjARh@@vDAXAz@M|A?z@?z@Hd@AhABf@FJLFRDbATfCJ~DBJBFTBb@ArBm@|EkA",
+"average_heartrate": 127.1,
+"average_speed": 5.102,
+"elevation_gain": 133.6,
+"source": "strava",
+"streak": 8
 }
 ]
