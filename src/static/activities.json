@@ -9134,5 +9134,53 @@
 "elevation_gain": 102.8,
 "source": "strava",
 "streak": 16
+},
+{
+"run_id": 12872860409,
+"name": "\ud83c\udf1e \u5348\u540e\u9a91\u884c",
+"distance": 3174.8,
+"moving_time": "0:11:29",
+"type": "Ride",
+"start_date": "2024-11-11 05:49:33+00:00",
+"start_date_local": "2024-11-11 13:49:33",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "qj`_Eokc}UyFrAu@HGAGKE_@AgBGgBSsAKqAQMSGa@BgA@UEQKWAIEs@BEDKt@IvA_@nBGVc@|@KLGDKl@?f@HpAFlBJdABf@EhCARELEDOBkCGoBDmEAyBG_AKOKAI@Aw@GIG?K^yDFi@?ICGOKaCcA_DcAeCm@kBm@iAWsAa@mEcA{@QwBYwBO}@Mw@C_AB}AGoGgA_@OCA?MAAq@?MESIGIAG@]",
+"average_heartrate": 128.8,
+"average_speed": 4.608,
+"elevation_gain": 26.4,
+"source": "strava",
+"streak": 17
+},
+{
+"run_id": 12873596779,
+"name": "\ud83c\udf19 \u5348\u540e\u9a91\u884c",
+"distance": 3186.6,
+"moving_time": "0:13:18",
+"type": "Ride",
+"start_date": "2024-11-11 08:56:55+00:00",
+"start_date_local": "2024-11-11 16:56:55",
+"location_country": "\u878d\u521b\u7199\u56ed\u4e09\u671f, \u592a\u6e56\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "otc_Ewdd}Ub@@JIDSFgA?{FB_@DMLEF?~A@`D?LF@FKpBMtACfCGrA@JFVFFTFb@BlAN~E`@fBFbC`@rAJ~BNZEd@?JEQGJBJFBHCd@FFVHFP@NKdBKl@ItA?HBBhCXD@BLh@JVBDADIF?zALf@B`Ef@~Eb@VFDCFOL@DEV}BT_AHu@BIDAJ@`BXfBLzB@vCGxA@ZHn@?x@EvAMXFJFLPBF@pBBx@H|@RrAFpAFPDBNCDBt@@pBc@F?BDHb@HHD?NAlAW",
+"average_heartrate": 116.1,
+"average_speed": 3.993,
+"elevation_gain": 30.8,
+"source": "strava",
+"streak": 17
+},
+{
+"run_id": 12874093375,
+"name": "\ud83c\udf19 \u5348\u540e\u884c\u8d70",
+"distance": 796.3,
+"moving_time": "0:10:01",
+"type": "Hike",
+"start_date": "2024-11-11 09:48:11+00:00",
+"start_date_local": "2024-11-11 17:48:11",
+"location_country": "China",
+"summary_polyline": "",
+"average_heartrate": 101.8,
+"average_speed": 1.325,
+"elevation_gain": 74.2,
+"source": "strava",
+"streak": 17
 }
 ]
