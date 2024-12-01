@@ -19,6 +19,8 @@ const data: ISiteMetadataResult = {
     {
       name: 'Strava',
       url: 'https://www.strava.com/athletes/135469581',
+    },
+    {
       name: 'Follow',
       url: 'https://app.follow.is/share/lists/71885160939929600',
     },
