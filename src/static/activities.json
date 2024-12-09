@@ -9854,5 +9854,37 @@
 "elevation_gain": 2.8,
 "source": "strava",
 "streak": 10
+},
+{
+"run_id": 13069680006,
+"name": "\ud83c\udf1e \u5348\u95f4\u9a91\u884c",
+"distance": 30710.1,
+"moving_time": "1:42:08",
+"type": "Ride",
+"start_date": "2024-12-08 04:53:18+00:00",
+"start_date_local": "2024-12-08 12:53:18",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "sw__Ekhc}UHu@OkED[LOfKgDNDj@hAbAdOER`@lEb@zJz@bKFlBv@x@f@TL?`G{DjL}JtGoGdEoE|CqCdb@ab@TOT@L\\?|AR`DVhBb@^pAHTTB~ApDjk@bAhO^jD|AfTBxALdAHNv@g@TBUb@MnALlDK`Do@rGa@lC@PpF|AjGjC^Zx@tAhDdDhBvAdChA`HvFdBhAfAf@rAVjFh@hHl@hLz@xAP\\Px@EvK|@`AThGf@pDl@vChR`@hBj@dAfB~A~@lA\\r@b@bBJfAHvCZzDZbBFt@zBtOPfCz@pGx@bEXvDbA`HXrAhApI\\nCHbBj@hEV|AVx@pBjOPt@`@^n@@vKuBbDaA^AxGuA|Bn@pEz@VNl@|@\\JvIiAfAThB`Af@DjB]dBq@\\BLN^pAjExP\\zAXrBZjADr@Q\\@XhAnDd@jCr@|C^x@l@jCJjAVnArAfEdApE?b@i@Lk@Z\\LfBbEp@dALj@N?UBiAsBi@kBs@aBBYv@_@BYgBcHq@cD_BwGQi@[g@k@wBYaBEu@q@cD?YNi@AS{BcJMcAi@uBKQa@kBe@gAk@aCUk@_@c@k@EmBt@iBRo@SSWGYNe@@_AK_AQc@mAi@o@g@m@q@qZmXsRuZ_IsRqE}Q_@cC]mAy@qFWyCq@wEc@_BaAmGQaBSsCjAuX^uMEeBB_CV{FPgBHiE{@sNO}AaEeL]a@eBy@W_@Qg@i@}Ff@}CAc@Ic@oI{Oy@eAy@}As@y@m@QcAKQQw@cEKiBS}@iUeb@sFcTu@cCg@q@u@o@kEqD_DmBg@m@k@kBkF_O{@uFo@uCqJsHsE{DkAmBq@y@}CkFo@qA}K_Ri@gAkImZi@cBYOgAGuALUI}@{@w@Km@XM\\_@dBIHKCm@yAkBcHqBeFu@wBe@{B{@gBmA{AwBhCmFnF{@\\gABgBc@_@AwDlAuB\\aAFYN[KGw@uAl@oDj@ae@tFiFb@IVJrA~AxJNdBu@d@IV?ZR|@nA~ILvCaI|@qEv@yDb@WNEn@OPcKxAmAf@AVd@fDh@xFd@vGPnEEXWJaPv@a@VOn@Z~E`@lDZxJFrGK`L@rGOfHCXMRFfD[`Km@hJnAb@fCXpBHlICh@N^GFFBSMOVR`AFrCErGy@hCk@NLF`@JpH]p@CG_@AcAHFQzANAMJKJLB^",
+"average_heartrate": 131.2,
+"average_speed": 5.011,
+"elevation_gain": 176.8,
+"source": "strava",
+"streak": 11
+},
+{
+"run_id": 13070522470,
+"name": "\ud83c\udf19 \u5348\u540e\u884c\u8d70",
+"distance": 1735.0,
+"moving_time": "0:21:26",
+"type": "Hike",
+"start_date": "2024-12-08 09:27:26+00:00",
+"start_date_local": "2024-12-08 17:27:26",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "yo`_Emic}UMEs@Pm@JUFMAIIIY@{@EsBQwAAmAGk@CKIKQEUB}@Dg@EiADc@A]ESUOIi@DYHMAhBJb@EFBNNf@@PD|@Kp@CZDVHPHHf@F`BNrALjDBTHLL@\\M~@Mt@SNALLPDTCd@M",
+"average_heartrate": 111.0,
+"average_speed": 1.349,
+"elevation_gain": 10.4,
+"source": "strava",
+"streak": 11
 }
 ]
