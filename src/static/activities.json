@@ -10606,5 +10606,37 @@
 "elevation_gain": 19.0,
 "source": "strava",
 "streak": 31
+},
+{
+"run_id": 13206086041,
+"name": "\ud83c\udf19\ud83e\udd76 \u5348\u540e\u884c\u8d70",
+"distance": 2894.2,
+"moving_time": "0:35:52",
+"type": "Hike",
+"start_date": "2024-12-28 09:02:22+00:00",
+"start_date_local": "2024-12-28 17:02:22",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "kg`_Eaoc}UK{BIUOYAYGi@?w@M_@ECkA\\aARoBZiAJk@Pi@CYGS?a@Ke@Be@OI@k@T?Si@L[@QDsBAc@Dc@A}BB[B_AAMLSDeAGW?SBOFK@Cf@YzBIXIDSEIB_@@]IYEqBIKCcAE[Ig@EUI]?i@Im@CcAUc@Ak@Gk@?g@Ka@Ck@DEFAh@QrBGHeAKaB_@WKm@EOGi@KgAEoAQi@@cAOuAK]Gm@?{AUQ?QG]Gs@QYCc@MqAS]M]GQKSYE_@GY",
+"average_heartrate": 108.3,
+"average_speed": 1.345,
+"elevation_gain": 20.0,
+"source": "strava",
+"streak": 31
+},
+{
+"run_id": 13207679469,
+"name": "\ud83c\udf19\ud83e\udd76 \u508d\u665a\u884c\u8d70",
+"distance": 5008.6,
+"moving_time": "1:05:05",
+"type": "Hike",
+"start_date": "2024-12-28 10:46:49+00:00",
+"start_date_local": "2024-12-28 18:46:49",
+"location_country": "\u878d\u521b\u7199\u56ed\u4e09\u671f, \u592a\u6e56\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "ifd_Eauc}UFHBVG\\DZ?NI`@AVB^Ij@Bt@?rBATEHAZSf@NjAAf@L`@D`@@r@Jh@BXAv@D~@C`@ER?xAGTCh@CLIJOHKVKH_@LMJo@Vi@HSDMLMBOPi@EGBANBX?fADP?f@Eb@DHNNFo@CE@KCMBUNa@@_@Cc@Ba@HSLMPDbAGd@Df@CBERi@?OC_@FUHEd@@XJPTD^FBrBGt@FZGrAEL@`B?^B|@AdALl@C~@B|@L|AV`@?H@LE?Cb@HLDpAz@rBv@XF`AHpC?n@RZDf@Kd@ERKDENe@L{@DgALgAB_@A]Ju@DqBf@iGFgBRmCF{@D_@HG~@N|@\\p@LbA\\vAXjA`@b@Rr@TrBx@p@\\ZVv@R^Pd@NrBbAl@T^\\JT@VBBzBHhBBvAAx@GtAPz@BTB|@@^@vCAREHIF{@@yCDs@?m@MmABi@BMVCXORGx@EVI|@g@HA@FPEJND@j@Q",
+"average_heartrate": 96.1,
+"average_speed": 1.283,
+"elevation_gain": 49.6,
+"source": "strava",
+"streak": 31
 }
 ]
