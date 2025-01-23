@@ -11278,5 +11278,37 @@
 "elevation_gain": 17.4,
 "source": "strava",
 "streak": 4
+},
+{
+"run_id": 13419870537,
+"name": "\ud83c\udf1e \u6668\u95f4\u884c\u8d70",
+"distance": 3401.0,
+"moving_time": "0:39:01",
+"type": "Hike",
+"start_date": "2025-01-22 02:54:53+00:00",
+"start_date_local": "2025-01-22 10:54:53",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "iu`_Emmc}UCiAMoAEyACWIOOCc@BSAWKOQOEm@@a@Du@?SBc@ES?NVBET?b@Ob@@l@LhAJT?XIXOPCJGDI\\MX?`@Dj@GlASh@ElCm@n@UHK^Q^In@Uf@UTEj@Qx@[Zc@h@U`@GPM`@m@@UAa@FuAEw@Ay@Ec@Sk@AMFJBTL\\Ab@B`@?p@Dh@A^Bh@DVLN@HJpBEhBDPR\\@j@PbBG?]MY?{@K]@UDMNYBQXKFG@MCm@LSLYX[@uACICKOK{@C_AWIWUo@T_ARsB^i@F{@FIBKJUB_@@]K_@@[CMEk@APQHLRLZ@v@MJBHJDV@z@Fd@JdBJdDBPJNBLJATGzAOn@Sb@[XLACFD^H|AW",
+"average_heartrate": 103.4,
+"average_speed": 1.453,
+"elevation_gain": 24.8,
+"source": "strava",
+"streak": 5
+},
+{
+"run_id": 13421470133,
+"name": "\ud83c\udf19 \u508d\u665a\u884c\u8d70",
+"distance": 104.2,
+"moving_time": "0:01:18",
+"type": "Hike",
+"start_date": "2025-01-22 10:19:31+00:00",
+"start_date_local": "2025-01-22 18:19:31",
+"location_country": "China",
+"summary_polyline": "",
+"average_heartrate": 99.6,
+"average_speed": 1.336,
+"elevation_gain": 3.6,
+"source": "strava",
+"streak": 5
 }
 ]
