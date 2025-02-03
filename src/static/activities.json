@@ -11502,5 +11502,21 @@
 "elevation_gain": 86.0,
 "source": "strava",
 "streak": 3
+},
+{
+"run_id": 13515628036,
+"name": "\ud83c\udf1e \u5348\u540e\u884c\u8d70",
+"distance": 2704.2,
+"moving_time": "0:32:29",
+"type": "Hike",
+"start_date": "2025-02-02 05:56:17+00:00",
+"start_date_local": "2025-02-02 13:56:17",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "mj`_E}jc}UoCl@W@SIaAVqARgBCk@KQ@_@JG@_@KSAGEQ?YIc@H]AKEAECaA@c@I_@][[G_@OEGEO?{@BWDQ?m@Bi@GMIC_EFm@EK@GLIBkACUCWBGH?DFD@VG`B@@v@c@MVCHFM}@wAFK?ORMz@Il@FDC@KDC`ADlDCT?XDjAGv@FXATBPC^AVEXAj@Dn@Ah@BTHH?l@G\\Qp@AjBWxBi@ZCN@J?L\\AdAR`CCdCII?CLFFNHH",
+"average_heartrate": 107.3,
+"average_speed": 1.387,
+"elevation_gain": 18.6,
+"source": "strava",
+"streak": 4
 }
 ]
