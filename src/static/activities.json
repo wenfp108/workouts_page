@@ -11854,5 +11854,37 @@
 "elevation_gain": 10.6,
 "source": "strava",
 "streak": 5
+},
+{
+"run_id": 13629636113,
+"name": "\u2601\ufe0f \u6668\u95f4\u884c\u8d70",
+"distance": 1456.9,
+"moving_time": "0:16:47",
+"type": "Hike",
+"start_date": "2025-02-15 02:43:48+00:00",
+"start_date_local": "2025-02-15 10:43:48",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "sx__Eygc}UPERKBI?SEg@UqADoAAUKk@@_@KsAGkA@m@KmCC{AIk@@oAMsBEqBBu@CGa@c@GQ]?~@^GTJh@Ah@?x@Dd@?ZEd@?XBVLPDP@\\FD@f@DRAlAK`A?b@T|BBh@C\\Jl@@v@N~AFV?vB",
+"average_heartrate": 103.2,
+"average_speed": 1.447,
+"elevation_gain": 13.4,
+"source": "strava",
+"streak": 6
+},
+{
+"run_id": 13630997319,
+"name": "\ud83c\udf2b\ufe0f \u5348\u540e\u884c\u8d70",
+"distance": 1544.9,
+"moving_time": "0:20:14",
+"type": "Hike",
+"start_date": "2025-02-15 09:21:11+00:00",
+"start_date_local": "2025-02-15 17:21:11",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "ck`_E}kc}Ue@J]DGAAIEd@OBYNcB\\a@FYHGAKOCKAoACiBOmBAy@Iq@EIMEU?_AIo@CCKZMd@Lf@J\\BVLF@r@GLGREb@ApAQrBa@n@QH?XNFLBp@RdBAfC@d@CJMH?Mh@^",
+"average_heartrate": 92.4,
+"average_speed": 1.273,
+"elevation_gain": 10.0,
+"source": "strava",
+"streak": 6
 }
 ]
