@@ -17,8 +17,8 @@ const getBasePath = () => {
 
 const data: ISiteMetadataResult = {
   siteTitle: 'Workouts Map',
-  siteUrl: 'https://app.follow.is/share/lists/71885160939929600',
-  logo:  'https://i.ibb.co/fzsXrXhS/40d52256ac657f9fd91d31b245d09d5.jpg',
+  siteUrl: 'https://woon-workouts.pages.dev',
+  logo:  'https://i.ibb.co/LXPy8SbJ/unnamed.jpg',
   description: 'Personal site and blog',
   navLinks: [
     {
@@ -26,7 +26,7 @@ const data: ISiteMetadataResult = {
       url: 'https://www.strava.com/athletes/135469581',
     },
     {
-      name: 'Follow',
+      name: 'Folo',
       url: 'https://app.follow.is/share/lists/71885160939929600',
     },
   ],
