@@ -18,7 +18,7 @@ const getBasePath = () => {
 const data: ISiteMetadataResult = {
   siteTitle: 'Workouts Map',
   siteUrl: 'https://app.follow.is/share/lists/71885160939929600',
-  logo:  'https://i.ibb.co/fxcj8V7/Big-Meow-cats-catsofinstagram-cat-catstagram-instagram-catlover-catlife-catlovers-instacat-kitten-pe.jpg',
+  logo:  'https://i.ibb.co/fzsXrXhS/40d52256ac657f9fd91d31b245d09d5.jpg',
   description: 'Personal site and blog',
   navLinks: [
     {
@@ -33,4 +33,3 @@ const data: ISiteMetadataResult = {
 };
 
 export default data;
-
