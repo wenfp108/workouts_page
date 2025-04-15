@@ -33,4 +33,4 @@ const data: ISiteMetadataResult = {
 };
 
 export default data;
-export default data;
+
