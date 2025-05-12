@@ -13598,5 +13598,21 @@
 "elevation_gain": 44.0,
 "source": "strava",
 "streak": 7
+},
+{
+"run_id": 14445950110,
+"name": "\ud83c\udf19 \u508d\u665a\u8dd1\u6b65",
+"distance": 5012.2,
+"moving_time": "0:32:42",
+"type": "Run",
+"start_date": "2025-05-11 11:44:27+00:00",
+"start_date_local": "2025-05-11 19:44:27",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "op`_Emic}Uo@RoARcAG[@i@G_AFq@IaBF_@FEJAL?nACl@Qv@Ed@A~CGVINUDuD@m@DkBAOAEEGs@EIWQ]QUSc@KkCmAW?KCq@i@oB}@QM_@KcCaAu@UeB_@yEoAY@g@GaBw@m@Uo@MgAQgCSgBGk@GwBOg@IkAIcB[q@Y}@Ig@M{@KG@EFCLFxAIlED`DBTJDj@BjBV`BLj@LxAR\\NFHLd@@XEpAQ`CMbAUvF@ZFJJHLB`BLp@Jf@@r@JpAf@j@Pl@PbARJCFS@UAk@Du@Z}BXaFRkBBQDEJCb@@FEDMRkBd@iHHc@HMFCLAd@JP@T[RC`B^X@b@JREHGDIH_@\\qC@YDKBAfCR`D^z@B`AJZD^J`DRLAHG",
+"average_heartrate": 159.2,
+"average_speed": 2.555,
+"elevation_gain": 38.2,
+"source": "strava",
+"streak": 8
 }
 ]
