@@ -14366,5 +14366,21 @@
 "elevation_gain": 23.8,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 15197574591,
+"name": "\u2601\ufe0f \u508d\u665a\u8dd1\u6b65",
+"distance": 5012.1,
+"moving_time": "0:32:24",
+"type": "Run",
+"start_date": "2025-07-22 12:17:42+00:00",
+"start_date_local": "2025-07-22 20:17:42",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "uw__Emnc}UE{@P{B?i@Eq@BeAM}ACmBJaAnAk@r@QzAo@x@U`Aa@VIL@HFFXp@vLHt@b@xHPbBHvANhCDbBP~A`@bGLdEb@`GCn@YpAe@fAa@b@y@b@iEjBsEzAkAVqBp@qE`A}Er@gFf@o@?{ALyEFsACeA@kAAeH[oHo@aEYOCKEGQAQPmBPwCLuCBcB\\sCFyA@kANqAFcBJiBFa@JSHEJA|BLlB@XETWLGh@CjA?t@CvD@ZDlADrF?\\Bj@I~@WHI@IBc@",
+"average_heartrate": 150.7,
+"average_speed": 2.578,
+"elevation_gain": 18.4,
+"source": "strava",
+"streak": 2
 }
 ]
