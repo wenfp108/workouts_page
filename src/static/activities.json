@@ -14590,5 +14590,37 @@
 "elevation_gain": 26.8,
 "source": "strava",
 "streak": 4
+},
+{
+"run_id": 15352899038,
+"name": "\ud83c\udf19\ud83e\udd75\ufe0f \u665a\u95f4\u8dd1\u6b65",
+"distance": 5004.4,
+"moving_time": "0:34:41",
+"type": "Run",
+"start_date": "2025-08-05 13:19:33+00:00",
+"start_date_local": "2025-08-05 21:19:33",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "ax__E{nc}UCm@BcBOkACoADw@Xy@@IKmC@a@DGJGb@CZO~@Y`Bo@^I|As@NAJBHLBPf@dILzAf@~J^nETdFJz@HjALpADvAH|@DbBRhDThD?^Eb@WhA_@t@a@b@]TeBx@oDtAcBj@uCv@uAf@_FbA_Ep@wFj@W@m@AiCT}ADeFAaEI_Lw@aDY}AKSAMIEO?MJuARkBPyC?mAB}@x@{FIkCXsFF_@FQLGH?v@HdAFbA?|FFvDAj@Ef@a@JCj@?hDHv@?~@EVIFK@IAkB",
+"average_heartrate": 154.2,
+"average_speed": 2.405,
+"elevation_gain": 34.0,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 15353745448,
+"name": "\ud83c\udf19\ud83e\udd75\ufe0f \u665a\u95f4\u884c\u8d70",
+"distance": 3265.4,
+"moving_time": "0:36:28",
+"type": "Hike",
+"start_date": "2025-08-05 14:31:16+00:00",
+"start_date_local": "2025-08-05 22:31:16",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "un`_E}ic}UQ?MF{A^S?c@J[Cq@@wAEy@Fo@K_@A[Fm@@QDEHAZ@nCKXETElABz@Av@GZEDc@BWAW@qBEyAF_BAe@Bw@?gDKWEOYe@CAKQKCGAg@CIHI@aACe@BKFERLd@JVN`A\\ZN^Nz@d@VJh@^LNBH?d@BB~BBr@E`@Kz@J`AEhANpGB~ACRKJQPHPAHKFQEkAAaAOkD?_@Fs@BGVGf@IdA[J?TFF?rA_@b@CRIV?FFHV?bAHz@?R@BXG@DJBTIbAKrB[d@Kf@U`@@z@CdAOJGFMFo@\\w@]P_@D",
+"average_heartrate": 116.5,
+"average_speed": 1.492,
+"elevation_gain": 32.8,
+"source": "strava",
+"streak": 1
 }
 ]
