@@ -15630,5 +15630,21 @@
 "elevation_gain": 14.6,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 15897987576,
+"name": "\u2601\ufe0f\ud83c\udf19 \u508d\u665a\u8dd1\u6b65",
+"distance": 3015.1,
+"moving_time": "0:18:42",
+"type": "Run",
+"start_date": "2025-09-22 12:28:09+00:00",
+"start_date_local": "2025-09-22 20:28:09",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "gw__Eoic}U?q@OuEIiAC_ACiIBa@NO|B_AbAW~CmARCD@HFFNNzAJ|Bd@bHLlC~@hLH|C^vDJpBF~CL~AFlBZ|C?^Kt@Oz@Up@MTSRQL[LWNa@Nc@Ve@HeA\\i@Z_@NgDx@cBl@[Pa@H{@Hi@HaDt@}AVUHk@F}@FwARiAJw@DKICQ@s@CmB",
+"average_heartrate": 158.0,
+"average_speed": 2.687,
+"elevation_gain": 18.4,
+"source": "strava",
+"streak": 1
 }
 ]
