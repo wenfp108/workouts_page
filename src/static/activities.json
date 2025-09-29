@@ -15662,5 +15662,53 @@
 "elevation_gain": 23.0,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 15961070835,
+"name": "\ud83c\udf1e\ud83e\udd75\ufe0f \u5348\u540e\u884c\u8d70",
+"distance": 2543.8,
+"moving_time": "0:29:36",
+"type": "Hike",
+"start_date": "2025-09-28 08:06:10+00:00",
+"start_date_local": "2025-09-28 16:06:10",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "om`_Ecic}Ug@KWO]Hm@XYFu@DuC?c@BWWICc@JsAK_@ASBGMEk@Ao@M_@IKUOWK_@KIMCgABcA?{@KWCMEEKEeA@mDEe@MiCa@[OOOFPLHj@HRJtALJDZb@`@Ld@@lA?j@EbB?v@EN@~@?ZE\\F`@CPBhAE~A?b@JRAZCd@Oh@CnAOrBa@FANBj@STLHJLj@Bf@?l@Dh@B`A@fAAXBJJFAV",
+"average_heartrate": 93.0,
+"average_speed": 1.432,
+"elevation_gain": 24.0,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 15964893865,
+"name": "\u2601\ufe0f\ud83c\udf19 \u508d\u665a\u8dd1\u6b65",
+"distance": 3825.2,
+"moving_time": "0:24:15",
+"type": "Run",
+"start_date": "2025-09-28 12:46:31+00:00",
+"start_date_local": "2025-09-28 20:46:31",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "kw__Egic}UDk@GiAAyCUwCC_DGi@C_@Bq@Je@Ti@\\UzGeCf@ON?NLDLF^Fn@ZhG^xEVjFNnAX~DLlDNdB`@rGLrFHrARxBEv@UbAa@`A]ZcAj@[TqEjBkD|@aCx@wBf@wAT}Bf@}Cb@i@DQ?q@JmBPWAKE@??EAF?Ae@JcALuFDyCAkCGiEU{BWmCOkCWeBMWIK[JgB",
+"average_heartrate": 149.2,
+"average_speed": 2.629,
+"elevation_gain": 20.6,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 15965128431,
+"name": "\u2601\ufe0f\ud83c\udf19 \u665a\u95f4\u884c\u8d70",
+"distance": 1627.6,
+"moving_time": "0:18:04",
+"type": "Hike",
+"start_date": "2025-09-28 13:11:11+00:00",
+"start_date_local": "2025-09-28 21:11:11",
+"location_country": "\u6e05\u664f\u8def, \u65e0\u9521\u56fd\u5bb6\u6570\u5b66\u7535\u5f71\u4ea7\u4e1a\u56edA\u533a, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "}xa_E}qb}UR_CBy@HUHGFAf@AF@EBB?nBF`CCt@@VC`@@f@F\\@pC?d@B\\AXSJMJCfCCj@DxAA`AEPEJK@KGuABw@Fu@?o@KaB@qADSf@SP?f@IfA]RKf@IlA]t@KJMJWCCQZPEDDMCFGDP",
+"average_heartrate": 119.7,
+"average_speed": 1.501,
+"elevation_gain": 9.0,
+"source": "strava",
+"streak": 1
 }
 ]
