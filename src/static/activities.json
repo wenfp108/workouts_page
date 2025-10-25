@@ -16094,5 +16094,37 @@
 "elevation_gain": 17.0,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 16237913373,
+"name": "\ud83c\udf1e \u6668\u95f4\u884c\u8d70",
+"distance": 2748.2,
+"moving_time": "0:30:30",
+"type": "Hike",
+"start_date": "2025-10-24 01:57:47+00:00",
+"start_date_local": "2025-10-24 09:57:47",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "mk`_Eyic}UmAFSAO?MEQ?q@Ro@Hc@LSCk@AQ@{@AYDu@?i@Q_@B[Eu@?YEEGAI@wAIc@GCSEUQe@MKMGs@BgACcABSCGIIQEQSg@FS?sCIkAQ]CWIkAWGGC]@y@Fo@Js@?[F_AE_ADKCG@G@ZE|@RAHLOh@GNK|@MxBGTRLj@HXJf@Dh@HVH|@LD@FNRJ|BBfBKhAAx@HJDBFAZEVAXFj@HDXB\\AHHDNBh@BPTp@@`@LvAJLRDf@@t@FLLj@EnAFd@KP?~@Yn@Gn@O\\Et@M",
+"average_heartrate": 98.0,
+"average_speed": 1.502,
+"elevation_gain": 15.6,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 16240409281,
+"name": "\u2601\ufe0f \u508d\u665a\u884c\u8d70",
+"distance": 2990.3,
+"moving_time": "0:29:21",
+"type": "Hike",
+"start_date": "2025-10-24 10:18:35+00:00",
+"start_date_local": "2025-10-24 18:18:35",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "wj`_Euic}Ue@AmABUBqBn@_@NaAYa@@e@GQ@OEYCq@H]G[?WFO@]C]DILKr@?nAAd@EPQ^EpBDfAG`@EBaAAwB@cBHoBAgABiCGe@EQCc@SWOO[Ck@CCCp@If@CD}@O_Ga@_C[}BUcAMkAIm@QKO?MPiDHi@@oABm@AYOUc@WcAUe@QSKw@U}@K_@OwDOa@Ii@UoCUc@Oo@I]QEGQGy@Gm@K[Mw@MIQI{@EoC",
+"average_heartrate": 111.7,
+"average_speed": 1.698,
+"elevation_gain": 25.8,
+"source": "strava",
+"streak": 1
 }
 ]
