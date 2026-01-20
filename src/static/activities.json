@@ -17566,5 +17566,53 @@
 "elevation_gain": 19.0,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 17100086408,
+"name": "\u2601\ufe0f \u6668\u95f4\u884c\u8d70",
+"distance": 2671.0,
+"moving_time": "0:28:22",
+"type": "Hike",
+"start_date": "2026-01-19 02:47:54+00:00",
+"start_date_local": "2026-01-19 10:47:54",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "yk`_Eejc}UcAR]IQ@mBd@_@D_@Be@Ci@BUEe@AS@YFm@QwCOEo@?cAISCEe@U[EOIMSEk@?SDu@As@Ha@KUOCKISGw@HeBAoAGu@S_AMw@SIGCK?c@LqCJu@Ai@XFQXCNGtAWbCH\\j@DXHl@FlAXTAbAHXApA@ZFf@P^B|AOn@?HJI~@A`@@HFNDTBBRDd@FDBF|@Rj@B|@Hr@DJNLl@R`A?^Lb@@d@APDN@hCg@j@CdAUZMp@I",
+"average_heartrate": 121.3,
+"average_speed": 1.569,
+"elevation_gain": 27.8,
+"source": "strava",
+"streak": 2
+},
+{
+"run_id": 17102219396,
+"name": "\u2601\ufe0f\ud83e\udd76 \u508d\u665a\u884c\u8d70",
+"distance": 2706.9,
+"moving_time": "0:29:51",
+"type": "Hike",
+"start_date": "2026-01-19 10:53:40+00:00",
+"start_date_local": "2026-01-19 18:53:40",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "ik`_Egjc}UsAXWEWS_@RSFcARQFc@Bm@AKBEDSFOEQCoACg@KeAA[IYCWECGAOAi@Bi@I[KI_@MMK[KGECI@wACkABm@AGSYGCS?yCByAGeDo@YM?IHg@JsAA}@@YHYD]XH_@p@G\\AVBd@QvB@NDDp@HRHn@B`@DLFFTHHd@Pp@DnB?~@EdADvAQd@A\\HZ?XER@`AEP?LFZAV@JHLVFR?b@Dz@VfD@|ADNJNXLb@Df@St@QTI^EL@VIhAQRG",
+"average_heartrate": 120.4,
+"average_speed": 1.511,
+"elevation_gain": 18.0,
+"source": "strava",
+"streak": 2
+},
+{
+"run_id": 17110082690,
+"name": "\u2744\ufe0f\ud83e\udd76 \u6668\u95f4\u884c\u8d70",
+"distance": 1982.7,
+"moving_time": "0:22:54",
+"type": "Hike",
+"start_date": "2026-01-19 23:54:38+00:00",
+"start_date_local": "2026-01-20 07:54:38",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "qj`_Ecjc}Uk@@y@Fi@K_Cl@Q?WHKAQOCQEm@Io@B{@ASI[Ue@?WHm@ASKg@?SKKGA]?qAIVKj@?RAL@XN`@r@D|AHjADbB?dAB`@BHJJTFJFJP@T?r@TtD?`CD|CAz@Fp@A~@HxABlBFv@?pAJfCDVTHb@B~@I",
+"average_heartrate": 117.1,
+"average_speed": 1.443,
+"elevation_gain": 8.2,
+"source": "strava",
+"streak": 3
 }
 ]
