@@ -18766,5 +18766,21 @@
 "elevation_gain": 6.8,
 "source": "strava",
 "streak": 5
+},
+{
+"run_id": 17787061548,
+"name": "\ud83c\udf2b\ufe0f \u5348\u95f4\u884c\u8d70",
+"distance": 823.2,
+"moving_time": "0:09:25",
+"type": "Hike",
+"start_date": "2026-03-20 04:12:04+00:00",
+"start_date_local": "2026-03-20 12:12:04",
+"location_country": "\u9274\u6e56\u8def, \u91d1\u57ce\u793e\u533a, \u534e\u820d\u8857\u9053, \u67ef\u6865\u533a, \u7ecd\u5174\u5e02, \u6d59\u6c5f\u7701, 312030, \u4e2d\u56fd",
+"summary_polyline": "qxsvDotc~UnCaHh@kA`AoCRc@FED??DU`@[z@MTcAjCa@~@W`@[fAo@xA",
+"average_heartrate": 127.2,
+"average_speed": 1.457,
+"elevation_gain": 15.4,
+"source": "strava",
+"streak": 1
 }
 ]
