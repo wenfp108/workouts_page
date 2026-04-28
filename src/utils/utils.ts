@@ -250,6 +250,7 @@ const geoJsonForRuns = (runs: Activity[]): FeatureCollection<LineString> => ({
       type: 'Feature',
       properties: {
         color: color,
+        indoor: run.subtype === 'indoor' || run.subtype === 'treadmill',
       },
       geometry: {
         type: 'LineString',
