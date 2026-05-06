@@ -34,6 +34,10 @@ const data: ISiteMetadataResult = {
       name: 'Folo',
       url: 'https://app.follow.is/share/lists/71885160939929600',
     },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/wenfp108/workouts_page',
+    },
   ],
 };
 
