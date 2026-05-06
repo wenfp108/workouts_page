@@ -36,7 +36,7 @@ const YearStat = ({
   let sumElevationGain = 0;
   let heartRate = 0;
   let heartRateNullCount = 0;
-  const workoutsCounts = {};
+  const workoutsCounts: { [key: string]: number[] } = {};
 
   runs.forEach((run) => {
     sumDistance += run.distance || 0;

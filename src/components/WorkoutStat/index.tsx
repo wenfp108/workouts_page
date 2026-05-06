@@ -10,13 +10,13 @@ const WorkoutStat = ({
   onClick,
   color = MAIN_COLOR,
 }: {
-  value: string;
+  value: string | number;
   description: string;
-  pace: string;
-  className: string;
-  distance: string;
-  onClick: (_year: string) => void;
-  color: string;
+  pace?: string;
+  className?: string;
+  distance?: string | number;
+  onClick?: (_event?: any) => void;
+  color?: string;
 }) => (
   <div
     className={`${className || ' '} pb-2`}

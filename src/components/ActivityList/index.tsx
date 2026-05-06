@@ -59,7 +59,7 @@ const AllSvg = MonthOfLifeSvg('all');
 // Cache for year summary lazy components to prevent flickering
 const yearSummaryCache: Record<
   string,
-  React.LazyExoticComponent<React.FC<React.SVGProps<SVGSVGElement>>>
+  React.LazyExoticComponent<React.ComponentType<any>>
 > = {};
 const getYearSummarySvg = (year: string) => {
   if (!yearSummaryCache[year]) {
@@ -809,6 +809,7 @@ const ActivityList: React.FC = () => {
                 }}
                 dailyDistances={dataList[0].summary.dailyDistances}
                 interval={interval}
+                activityType={activityType}
                 activities={
                   interval === 'day'
                     ? dataList[0].summary.activities
@@ -885,6 +886,7 @@ const ActivityList: React.FC = () => {
                             }}
                             dailyDistances={cardData.summary.dailyDistances}
                             interval={interval}
+                            activityType={activityType}
                             activities={
                               interval === 'day'
                                 ? cardData.summary.activities

@@ -123,7 +123,7 @@ const RUN_TITLES = {
   ALL_TITLE,
 };
 
-const TYPES_MAPPING = {
+const TYPES_MAPPING: { [key: string]: string } = {
   Run: RUN_TITLES.RUN_TITLE,
   'Trail Run': RUN_TITLES.TRAIL_RUN_TITLE,
   Swim: RUN_TITLES.SWIM_TITLE,

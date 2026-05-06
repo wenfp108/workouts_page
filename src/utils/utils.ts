@@ -50,7 +50,7 @@ export interface Activity {
   distance: number;
   moving_time: string;
   type: string;
-  subtype: string;
+  subtype?: string;
   start_date: string;
   start_date_local: string;
   location_country?: string | null;
@@ -209,11 +209,12 @@ const locationForRun = (
   return r;
 };
 
-const intComma = (x = '') => {
-  if (x.toString().length <= 5) {
-    return x;
+const intComma = (x: string | number = '') => {
+  const str = String(x);
+  if (str.length <= 5) {
+    return str;
   }
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return str.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 
 const pathForRun = (run: Activity): Coordinate[] => {
@@ -499,9 +500,13 @@ const sortDateFunc = (a: Activity, b: Activity) => {
 const sortDateFuncReverse = (a: Activity, b: Activity) => sortDateFunc(b, a);
 
 const getMapStyle = (vendor: string, styleName: string, token: string) => {
-  const style = (MAP_TILE_STYLES as any)[vendor][styleName];
+  const vendorStyles = (MAP_TILE_STYLES as any)[vendor];
+  if (!vendorStyles) {
+    return MAP_TILE_STYLES.mapcn['osm-bright'];
+  }
+  const style = vendorStyles[styleName];
   if (!style) {
-    return MAP_TILE_STYLES.default;
+    return MAP_TILE_STYLES.mapcn['osm-bright'];
   }
   if (vendor === 'maptiler' || vendor === 'stadiamaps') {
     return style + token;
