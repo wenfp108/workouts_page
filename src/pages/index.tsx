@@ -197,7 +197,12 @@ const Index = () => {
         });
       } else {
         setYear(thisYear);
-        setCurrentFilter({ item: type, func: filterTypeRuns, item2: null, func2: null });
+        setCurrentFilter({
+          item: type,
+          func: filterTypeRuns,
+          item2: null,
+          func2: null,
+        });
       }
       setRunIndex(-1);
       setTitle(`${year} ${type} Type Heatmap`);
@@ -333,7 +338,12 @@ const Index = () => {
         const runYear = targetRun.start_date_local.slice(0, 4);
         if (year !== runYear) {
           setYear(runYear);
-          setCurrentFilter({ item: runYear, func: filterYearRuns, item2: null, func2: null });
+          setCurrentFilter({
+            item: runYear,
+            func: filterYearRuns,
+            item2: null,
+            func2: null,
+          });
         }
       } else {
         // If run doesn't exist, clear the hash and show a warning

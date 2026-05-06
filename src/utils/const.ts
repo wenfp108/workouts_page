@@ -43,7 +43,7 @@ const ROAD_LABEL_DISPLAY = true;
 const PRIVACY_MODE = false;
 // update for now 2024/11/17 the lights on default is false
 //set to `false` if you want to make light off as default, only effect when `PRIVACY_MODE` = false
-const LIGHTS_ON =false;
+const LIGHTS_ON = false;
 //set to `true` if you want to show the 'Elevation Gain' column
 const SHOW_ELEVATION_GAIN = true;
 // richer title for the activity types (like garmin style)
@@ -53,10 +53,12 @@ const RICH_TITLE = true;
 const IS_CHINESE = true;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `户外运动 ${yearLength} 年 ` + ( year === 'Total' ? '' : `，地图展示的是 ${year} 年的轨迹`);
+  `户外运动 ${yearLength} 年 ` +
+  (year === 'Total' ? '' : `，地图展示的是 ${year} 年的轨迹`);
 
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `Logged ${yearLength} Years of Outdoor Journey` +  ( year === 'Total' ? '' : `, the map show routes in ${year}`);
+  `Logged ${yearLength} Years of Outdoor Journey` +
+  (year === 'Total' ? '' : `, the map show routes in ${year}`);
 
 // not support English for now
 const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
@@ -89,7 +91,9 @@ const TOTAL_TIME_TITLE = IS_CHINESE ? '总时间' : 'Total Time';
 const AVERAGE_SPEED_TITLE = IS_CHINESE ? '平均速度' : 'Average Speed';
 const TOTAL_DISTANCE_TITLE = IS_CHINESE ? '总距离' : 'Total Distance';
 const AVERAGE_DISTANCE_TITLE = IS_CHINESE ? '平均距离' : 'Average Distance';
-const TOTAL_ELEVATION_GAIN_TITLE = IS_CHINESE ? '总海拔爬升' : 'Total Elevation Gain';
+const TOTAL_ELEVATION_GAIN_TITLE = IS_CHINESE
+  ? '总海拔爬升'
+  : 'Total Elevation Gain';
 const AVERAGE_HEART_RATE_TITLE = IS_CHINESE ? '平均心率' : 'Average Heart Rate';
 const YEARLY_TITLE = IS_CHINESE ? 'Year' : 'Yearly';
 const MONTHLY_TITLE = IS_CHINESE ? 'Month' : 'Monthly';
@@ -139,23 +143,23 @@ const TYPES_MAPPING: { [key: string]: string } = {
   Flight: RUN_TITLES.FLIGHT_TITLE,
   'Treadmill Run': RUN_TITLES.RUN_TREADMILL_TITLE,
   all: RUN_TITLES.ALL_TITLE,
-}
+};
 
 const ACTIVITY_TOTAL = {
-    ACTIVITY_COUNT_TITLE,
-    MAX_DISTANCE_TITLE,
-    MAX_SPEED_TITLE,
-    TOTAL_TIME_TITLE,
-    AVERAGE_SPEED_TITLE,
-    TOTAL_DISTANCE_TITLE,
-    AVERAGE_DISTANCE_TITLE,
-    TOTAL_ELEVATION_GAIN_TITLE,
-    AVERAGE_HEART_RATE_TITLE,
-    YEARLY_TITLE,
-    MONTHLY_TITLE,
-    WEEKLY_TITLE,
-    DAILY_TITLE,
-    LOCATION_TITLE,
+  ACTIVITY_COUNT_TITLE,
+  MAX_DISTANCE_TITLE,
+  MAX_SPEED_TITLE,
+  TOTAL_TIME_TITLE,
+  AVERAGE_SPEED_TITLE,
+  TOTAL_DISTANCE_TITLE,
+  AVERAGE_DISTANCE_TITLE,
+  TOTAL_ELEVATION_GAIN_TITLE,
+  AVERAGE_HEART_RATE_TITLE,
+  YEARLY_TITLE,
+  MONTHLY_TITLE,
+  WEEKLY_TITLE,
+  DAILY_TITLE,
+  LOCATION_TITLE,
 };
 
 export {
@@ -304,9 +308,7 @@ export const MAP_TILE_STYLES = {
       'https://tiles.stadiamaps.com/styles/alidade-smooth.json?api_key=',
     'alidade-smooth-dark':
       'https://tiles.stadiamaps.com/styles/alidade-smooth-dark.json?api_key=',
-    outback:
-      'https://tiles.stadiamaps.com/styles/outback.json?api_key=',
-    osm_bright:
-      'https://tiles.stadiamaps.com/styles/osm_bright.json?api_key=',
+    outback: 'https://tiles.stadiamaps.com/styles/outback.json?api_key=',
+    osm_bright: 'https://tiles.stadiamaps.com/styles/osm_bright.json?api_key=',
   },
 };

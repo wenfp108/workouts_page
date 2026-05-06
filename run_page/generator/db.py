@@ -37,6 +37,7 @@ ACTIVITY_KEYS = [
     "distance",
     "moving_time",
     "type",
+    "subtype",
     "start_date",
     "start_date_local",
     "location_country",
@@ -57,6 +58,7 @@ class Activity(Base):
     moving_time = Column(Interval)
     elapsed_time = Column(Interval)
     type = Column(String)
+    subtype = Column(String, default="")
     start_date = Column(String)
     start_date_local = Column(String)
     location_country = Column(String)
