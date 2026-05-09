@@ -41,7 +41,9 @@ const VIRTUAL_LIST_STYLES = {
 };
 
 const getMolSvgSrc = (sportType: string) => {
-  return sportType === 'all' ? '/assets/mol.svg' : `/assets/mol_${sportType}.svg`;
+  return sportType === 'all'
+    ? '/assets/mol.svg'
+    : `/assets/mol_${sportType}.svg`;
 };
 
 const getYearSummarySvgSrc = (year: string) => {
