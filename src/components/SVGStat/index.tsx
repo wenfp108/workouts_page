@@ -1,5 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { initSvgColorAdjustments } from '@/utils/colorUtils';
+
+const InlineSvg = ({ src, className }: { src: string; className: string }) => {
+  const [svgContent, setSvgContent] = useState('');
+
+  useEffect(() => {
+    fetch(src)
+      .then((res) => res.text())
+      .then(setSvgContent)
+      .catch((err) => console.error('Failed to load SVG:', src, err));
+  }, [src]);
+
+  if (!svgContent) return <div className="text-center">Loading...</div>;
+
+  return (
+    <div
+      className={className}
+      dangerouslySetInnerHTML={{ __html: svgContent }}
+    />
+  );
+};
 
 const SVGStat = () => {
   useEffect(() => {
@@ -11,14 +31,12 @@ const SVGStat = () => {
 
   return (
     <div id="svgStat">
-      <img
+      <InlineSvg
         src="/assets/grid.svg"
-        alt="Grid Statistics"
         className="grid-svg mt-4 h-auto w-full"
       />
-      <img
+      <InlineSvg
         src="/assets/github.svg"
-        alt="GitHub Contributions"
         className="github-svg mt-4 h-auto w-full"
       />
     </div>
