@@ -29,7 +29,11 @@ const RunMarker = ({
             maxWidth: '25px',
           }}
         >
-          <img src="/assets/start.svg" alt="Start" className={styles.locationSVG} />
+          <img
+            src="/assets/start.svg"
+            alt="Start"
+            className={styles.locationSVG}
+          />
         </div>
       </Marker>
       <Marker key="maker_end" longitude={endLon} latitude={endLat}>
