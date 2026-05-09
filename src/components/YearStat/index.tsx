@@ -1,13 +1,14 @@
+import { lazy, Suspense } from 'react';
 import Stat from '@/components/Stat';
 import WorkoutStat from '@/components/WorkoutStat';
 import useActivities from '@/hooks/useActivities';
 
 import { formatPace, colorFromType } from '@/utils/utils';
 import useHover from '@/hooks/useHover';
+import { yearStats, githubYearStats } from '@assets/index';
+import { loadSvgComponent } from '@/utils/svgUtils';
 import { SHOW_ELEVATION_GAIN } from '@/utils/const';
 import { DIST_UNIT, M_TO_DIST, M_TO_ELEV, ELEV_UNIT } from '@/utils/utils';
-
-const BASE = import.meta.env.BASE_URL;
 
 const YearStat = ({
   year,
@@ -21,6 +22,11 @@ const YearStat = ({
   let { activities: runs, years } = useActivities();
   // for hover
   const [hovered, eventHandlers] = useHover();
+  // lazy Component
+  const YearSVG = lazy(() => loadSvgComponent(yearStats, `./year_${year}.svg`));
+  const GithubYearSVG = lazy(() =>
+    loadSvgComponent(githubYearStats, `./github_${year}.svg`)
+  );
 
   if (years.includes(year)) {
     runs = runs.filter((run) => run.start_date_local.slice(0, 4) === year);
@@ -30,7 +36,7 @@ const YearStat = ({
   let sumElevationGain = 0;
   let heartRate = 0;
   let heartRateNullCount = 0;
-  const workoutsCounts: { [key: string]: number[] } = {};
+  const workoutsCounts = {};
 
   runs.forEach((run) => {
     sumDistance += run.distance || 0;
@@ -111,18 +117,10 @@ const YearStat = ({
         )}
       </section>
       {year !== 'Total' && hovered && (
-        <>
-          <img
-            src={`${BASE}assets/year_${year}.svg`}
-            alt={`Year ${year} Statistics`}
-            className="year-svg my-4 h-4/6 w-4/6 border-0 p-0"
-          />
-          <img
-            src={`${BASE}assets/github_${year}.svg`}
-            alt={`GitHub ${year} Contributions`}
-            className="github-year-svg my-4 h-auto w-full border-0 p-0"
-          />
-        </>
+        <Suspense fallback="loading...">
+          <YearSVG className="year-svg my-4 h-4/6 w-4/6 border-0 p-0" />
+          <GithubYearSVG className="github-year-svg my-4 h-auto w-full border-0 p-0" />
+        </Suspense>
       )}
       <hr />
     </div>

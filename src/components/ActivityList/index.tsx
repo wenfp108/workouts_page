@@ -1,5 +1,7 @@
 import React, {
+  lazy,
   useState,
+  Suspense,
   useEffect,
   useRef,
   useCallback,
@@ -19,6 +21,8 @@ import { useNavigate } from 'react-router-dom';
 import activities from '@/static/activities.json';
 import styles from './style.module.css';
 import { ACTIVITY_TOTAL, LOADING_TEXT, TYPES_MAPPING } from '@/utils/const';
+import { totalStat, yearSummaryStats } from '@assets/index';
+import { loadSvgComponent } from '@/utils/svgUtils';
 import { SHOW_ELEVATION_GAIN, HOME_PAGE_TITLE } from '@/utils/const';
 import { DIST_UNIT, M_TO_DIST } from '@/utils/utils';
 import RoutePreview from '@/components/RoutePreview';
@@ -39,17 +43,31 @@ const VIRTUAL_LIST_STYLES = {
       'var(--color-primary, var(--color-scrollbar-thumb, rgba(0,0,0,0.4)))',
   },
 };
-
-const BASE = import.meta.env.BASE_URL;
-
-const getMolSvgSrc = (sportType: string) => {
-  return sportType === 'all'
-    ? `${BASE}assets/mol.svg`
-    : `${BASE}assets/mol_${sportType}.svg`;
+const MonthOfLifeSvg = (sportType: string) => {
+  const path = sportType === 'all' ? './mol.svg' : `./mol_${sportType}.svg`;
+  return lazy(() => loadSvgComponent(totalStat, path));
 };
 
-const getYearSummarySvgSrc = (year: string) => {
-  return `${BASE}assets/year_summary_${year}.svg`;
+const RunningSvg = MonthOfLifeSvg('running');
+const WalkingSvg = MonthOfLifeSvg('walking');
+const HikingSvg = MonthOfLifeSvg('hiking');
+const CyclingSvg = MonthOfLifeSvg('cycling');
+const SwimmingSvg = MonthOfLifeSvg('swimming');
+const SkiingSvg = MonthOfLifeSvg('skiing');
+const AllSvg = MonthOfLifeSvg('all');
+
+// Cache for year summary lazy components to prevent flickering
+const yearSummaryCache: Record<
+  string,
+  React.LazyExoticComponent<React.FC<React.SVGProps<SVGSVGElement>>>
+> = {};
+const getYearSummarySvg = (year: string) => {
+  if (!yearSummaryCache[year]) {
+    yearSummaryCache[year] = lazy(() =>
+      loadSvgComponent(yearSummaryStats, `./year_summary_${year}.svg`)
+    );
+  }
+  return yearSummaryCache[year];
 };
 
 interface ActivitySummary {
@@ -730,19 +748,26 @@ const ActivityList: React.FC = () => {
               </button>
             ))}
           </div>
-          {selectedYear ? (
-            <img
-              src={getYearSummarySvgSrc(selectedYear)}
-              alt={`Year ${selectedYear} Summary`}
-              className={styles.yearSummarySvg}
-            />
-          ) : (
-            <img
-              src={getMolSvgSrc(sportType)}
-              alt={`${sportType} Statistics`}
-              className={styles.yearSummarySvg}
-            />
-          )}
+          <Suspense fallback={<div>Loading SVG...</div>}>
+            {selectedYear ? (
+              // Show Year Summary SVG when a year is selected
+              (() => {
+                const YearSvg = getYearSummarySvg(selectedYear);
+                return <YearSvg className={styles.yearSummarySvg} />;
+              })()
+            ) : (
+              // Show Life SVG when no year is selected
+              <>
+                {sportType === 'Run' && <RunningSvg />}
+                {sportType === 'Walk' && <WalkingSvg />}
+                {sportType === 'Hike' && <HikingSvg />}
+                {sportType === 'Ride' && <CyclingSvg />}
+                {sportType === 'Swim' && <SwimmingSvg />}
+                {sportType === 'Ski' && <SkiingSvg />}
+                {sportType === 'all' && <AllSvg />}
+              </>
+            )}
+          </Suspense>
         </div>
       )}
 
@@ -784,7 +809,6 @@ const ActivityList: React.FC = () => {
                 }}
                 dailyDistances={dataList[0].summary.dailyDistances}
                 interval={interval}
-                activityType={activityType}
                 activities={
                   interval === 'day'
                     ? dataList[0].summary.activities
@@ -861,7 +885,6 @@ const ActivityList: React.FC = () => {
                             }}
                             dailyDistances={cardData.summary.dailyDistances}
                             interval={interval}
-                            activityType={activityType}
                             activities={
                               interval === 'day'
                                 ? cardData.summary.activities

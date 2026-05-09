@@ -1,7 +1,7 @@
+import { ReactComponent as EndSvg } from '@assets/end.svg';
+import { ReactComponent as StartSvg } from '@assets/start.svg';
 import { Marker } from 'react-map-gl';
 import styles from './style.module.css';
-
-const BASE = import.meta.env.BASE_URL;
 
 interface IRunMarkerProperties {
   startLon: number;
@@ -31,11 +31,7 @@ const RunMarker = ({
             maxWidth: '25px',
           }}
         >
-          <img
-            src={`${BASE}assets/start.svg`}
-            alt="Start"
-            className={styles.locationSVG}
-          />
+          <StartSvg className={styles.locationSVG} />
         </div>
       </Marker>
       <Marker key="maker_end" longitude={endLon} latitude={endLat}>
@@ -45,11 +41,7 @@ const RunMarker = ({
             maxWidth: '25px',
           }}
         >
-          <img
-            src={`${BASE}assets/end.svg`}
-            alt="End"
-            className={styles.locationSVG}
-          />
+          <EndSvg className={styles.locationSVG} />
         </div>
       </Marker>
     </>

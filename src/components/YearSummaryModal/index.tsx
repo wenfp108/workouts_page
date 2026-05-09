@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect, useMemo } from 'react';
+import { yearSummaryStats } from '@assets/index';
+import { loadSvgComponent } from '@/utils/svgUtils';
 import styles from './style.module.css';
-
-const BASE = import.meta.env.BASE_URL;
 
 interface YearSummaryModalProps {
   year: string;
@@ -9,6 +9,15 @@ interface YearSummaryModalProps {
 }
 
 const YearSummaryModal = ({ year, onClose }: YearSummaryModalProps) => {
+  // Memoize the lazy component to prevent re-creation on each render
+  const YearSummarySVG = useMemo(
+    () =>
+      lazy(() =>
+        loadSvgComponent(yearSummaryStats, `./year_summary_${year}.svg`)
+      ),
+    [year]
+  );
+
   // Close on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -34,11 +43,9 @@ const YearSummaryModal = ({ year, onClose }: YearSummaryModalProps) => {
         <button className={styles.closeButton} onClick={onClose}>
           ×
         </button>
-        <img
-          src={`${BASE}assets/year_summary_${year}.svg`}
-          alt={`Year ${year} Summary`}
-          className={styles.svg}
-        />
+        <Suspense fallback={<div className={styles.loading}>Loading...</div>}>
+          <YearSummarySVG className={styles.svg} />
+        </Suspense>
       </div>
     </div>
   );

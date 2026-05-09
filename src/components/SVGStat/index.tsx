@@ -1,46 +1,29 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
+import { totalStat } from '@assets/index';
+import { loadSvgComponent } from '@/utils/svgUtils';
 import { initSvgColorAdjustments } from '@/utils/colorUtils';
 
-const BASE = import.meta.env.BASE_URL;
+// Lazy load both github.svg and grid.svg
+const GithubSvg = lazy(() => loadSvgComponent(totalStat, './github.svg'));
 
-const InlineSvg = ({ src, className }: { src: string; className: string }) => {
-  const [svgContent, setSvgContent] = useState('');
-
-  useEffect(() => {
-    fetch(`${BASE}${src}`)
-      .then((res) => res.text())
-      .then(setSvgContent)
-      .catch((err) => console.error('Failed to load SVG:', src, err));
-  }, [src]);
-
-  if (!svgContent) return <div className="text-center">Loading...</div>;
-
-  return (
-    <div
-      className={className}
-      dangerouslySetInnerHTML={{ __html: svgContent }}
-    />
-  );
-};
+const GridSvg = lazy(() => loadSvgComponent(totalStat, './grid.svg'));
 
 const SVGStat = () => {
   useEffect(() => {
+    // Initialize SVG color adjustments when component mounts
     const timer = setTimeout(() => {
       initSvgColorAdjustments();
-    }, 100);
+    }, 100); // Small delay to ensure SVG is rendered
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div id="svgStat">
-      <InlineSvg
-        src="assets/grid.svg"
-        className="grid-svg mt-4 h-auto w-full"
-      />
-      <InlineSvg
-        src="assets/github.svg"
-        className="github-svg mt-4 h-auto w-full"
-      />
+      <Suspense fallback={<div className="text-center">Loading...</div>}>
+        <GridSvg className="grid-svg mt-4 h-auto w-full" />
+        <GithubSvg className="github-svg mt-4 h-auto w-full" />
+      </Suspense>
     </div>
   );
 };
