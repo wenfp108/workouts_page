@@ -1,29 +1,26 @@
-import { lazy, Suspense, useEffect } from 'react';
-import { totalStat } from '@assets/index';
-import { loadSvgComponent } from '@/utils/svgUtils';
+import { useEffect } from 'react';
 import { initSvgColorAdjustments } from '@/utils/colorUtils';
-
-// Lazy load both github.svg and grid.svg
-const GithubSvg = lazy(() => loadSvgComponent(totalStat, './github.svg'));
-
-const GridSvg = lazy(() => loadSvgComponent(totalStat, './grid.svg'));
 
 const SVGStat = () => {
   useEffect(() => {
-    // Initialize SVG color adjustments when component mounts
     const timer = setTimeout(() => {
       initSvgColorAdjustments();
-    }, 100); // Small delay to ensure SVG is rendered
-
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div id="svgStat">
-      <Suspense fallback={<div className="text-center">Loading...</div>}>
-        <GridSvg className="grid-svg mt-4 h-auto w-full" />
-        <GithubSvg className="github-svg mt-4 h-auto w-full" />
-      </Suspense>
+      <img
+        src="/assets/grid.svg"
+        alt="Grid Statistics"
+        className="grid-svg mt-4 h-auto w-full"
+      />
+      <img
+        src="/assets/github.svg"
+        alt="GitHub Contributions"
+        className="github-svg mt-4 h-auto w-full"
+      />
     </div>
   );
 };
