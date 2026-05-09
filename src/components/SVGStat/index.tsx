@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { initSvgColorAdjustments } from '@/utils/colorUtils';
 
+const BASE = import.meta.env.BASE_URL;
+
 const InlineSvg = ({ src, className }: { src: string; className: string }) => {
   const [svgContent, setSvgContent] = useState('');
 
   useEffect(() => {
-    fetch(src)
+    fetch(`${BASE}${src}`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error('Failed to load SVG:', src, err));
@@ -32,11 +34,11 @@ const SVGStat = () => {
   return (
     <div id="svgStat">
       <InlineSvg
-        src="/assets/grid.svg"
+        src="assets/grid.svg"
         className="grid-svg mt-4 h-auto w-full"
       />
       <InlineSvg
-        src="/assets/github.svg"
+        src="assets/github.svg"
         className="github-svg mt-4 h-auto w-full"
       />
     </div>

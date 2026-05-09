@@ -7,6 +7,8 @@ import useHover from '@/hooks/useHover';
 import { SHOW_ELEVATION_GAIN } from '@/utils/const';
 import { DIST_UNIT, M_TO_DIST, M_TO_ELEV, ELEV_UNIT } from '@/utils/utils';
 
+const BASE = import.meta.env.BASE_URL;
+
 const YearStat = ({
   year,
   onClick,
@@ -111,12 +113,12 @@ const YearStat = ({
       {year !== 'Total' && hovered && (
         <>
           <img
-            src={`/assets/year_${year}.svg`}
+            src={`${BASE}assets/year_${year}.svg`}
             alt={`Year ${year} Statistics`}
             className="year-svg my-4 h-4/6 w-4/6 border-0 p-0"
           />
           <img
-            src={`/assets/github_${year}.svg`}
+            src={`${BASE}assets/github_${year}.svg`}
             alt={`GitHub ${year} Contributions`}
             className="github-year-svg my-4 h-auto w-full border-0 p-0"
           />

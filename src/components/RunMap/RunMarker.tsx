@@ -1,6 +1,8 @@
 import { Marker } from 'react-map-gl';
 import styles from './style.module.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 interface IRunMarkerProperties {
   startLon: number;
   startLat: number;
@@ -30,7 +32,7 @@ const RunMarker = ({
           }}
         >
           <img
-            src="/assets/start.svg"
+            src={`${BASE}assets/start.svg`}
             alt="Start"
             className={styles.locationSVG}
           />
@@ -43,7 +45,11 @@ const RunMarker = ({
             maxWidth: '25px',
           }}
         >
-          <img src="/assets/end.svg" alt="End" className={styles.locationSVG} />
+          <img
+            src={`${BASE}assets/end.svg`}
+            alt="End"
+            className={styles.locationSVG}
+          />
         </div>
       </Marker>
     </>

@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import styles from './style.module.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 interface YearSummaryModalProps {
   year: string;
   onClose: () => void;
@@ -33,7 +35,7 @@ const YearSummaryModal = ({ year, onClose }: YearSummaryModalProps) => {
           ×
         </button>
         <img
-          src={`/assets/year_summary_${year}.svg`}
+          src={`${BASE}assets/year_summary_${year}.svg`}
           alt={`Year ${year} Summary`}
           className={styles.svg}
         />

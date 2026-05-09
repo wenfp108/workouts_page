@@ -40,14 +40,16 @@ const VIRTUAL_LIST_STYLES = {
   },
 };
 
+const BASE = import.meta.env.BASE_URL;
+
 const getMolSvgSrc = (sportType: string) => {
   return sportType === 'all'
-    ? '/assets/mol.svg'
-    : `/assets/mol_${sportType}.svg`;
+    ? `${BASE}assets/mol.svg`
+    : `${BASE}assets/mol_${sportType}.svg`;
 };
 
 const getYearSummarySvgSrc = (year: string) => {
-  return `/assets/year_summary_${year}.svg`;
+  return `${BASE}assets/year_summary_${year}.svg`;
 };
 
 interface ActivitySummary {
