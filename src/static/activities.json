@@ -21231,5 +21231,39 @@
 "elevation_gain": 44.8,
 "source": "strava",
 "streak": 3
+},
+{
+"run_id": 18750490429,
+"name": "\ud83c\udf1e\ud83e\udd75\ufe0f \u6668\u95f4\u884c\u8d70",
+"distance": 1743.7,
+"moving_time": "0:22:51",
+"type": "Hike",
+"subtype": "",
+"start_date": "2026-06-01 02:42:33+00:00",
+"start_date_local": "2026-06-01 10:42:33",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "gl`_Ewic}Uw@NUCOIIAOF]DYJm@D[HQ?UDOCa@B}@CcA?OB]SYAMCGIGWBi@E_@CIMMCGAcASYCK@KJWCWBm@Cu@EECAaACMCG@XOJB`@DLDNV?h@Dd@DHJFBNF?HARFN?VPFNF|@Lf@@x@Fp@JRHH`@B\\J\\Bp@@JBZALD`@D`@O|@QZKPA\\@TENI^EZKb@C",
+"average_heartrate": 103.4,
+"average_speed": 1.272,
+"elevation_gain": 23.6,
+"source": "strava",
+"streak": 4
+},
+{
+"run_id": 18750490433,
+"name": "\ud83c\udf1e\ud83e\udd75\ufe0f \u6668\u95f4\u884c\u8d70",
+"distance": 2761.6,
+"moving_time": "0:35:02",
+"type": "Hike",
+"subtype": "",
+"start_date": "2026-06-02 02:30:19+00:00",
+"start_date_local": "2026-06-02 10:30:19",
+"location_country": "\u96ea\u65b0\u82d1, \u96ea\u6d6a\u8857\u9053, \u6ee8\u6e56\u533a, \u65e0\u9521\u5e02, \u6c5f\u82cf\u7701, 214000, \u4e2d\u56fd",
+"summary_polyline": "sg`_E{lc}UDQAMUo@CWBOE@AOD]?{@OmCCKKGSEm@RUEsB`@}BXIBCDYF]BSASGmAH}BAa@E_@UQEaBBm@ISAe@?g@De@A_BGu@?i@MoB[YIEECK@[FcBGQA_@Jw@@k@VD@DMZMv@Gr@@j@Cl@EZ?Rr@NLJLDhAJnA\\l@Dl@Ap@@JRHBh@BXAZDt@EV@|@EDTDtALZXNl@?NTFz@Rl@@nAFb@BHLL^Nb@DvAAPHRAr@Dr@Kx@YPC^DPCfCg@",
+"average_heartrate": 106.5,
+"average_speed": 1.314,
+"elevation_gain": 102.8,
+"source": "strava",
+"streak": 5
 }
 ]
