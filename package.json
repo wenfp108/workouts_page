@@ -3,7 +3,7 @@
   "description": "Leo Woon",
   "version": "1.0.0",
   "author": "Leo Woon",
-  "packageManager": "pnpm@8.9.0+sha256.8f5264ad1d100da11a6add6bb8a94c6f1e913f9e9261b2a551fabefad2ec0fec",
+  "packageManager": "pnpm@9.15.0",
   "dependencies": {
     "@mapbox/mapbox-gl-language": "^1.0.1",
     "@mapbox/polyline": "^1.2.0",

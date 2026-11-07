@@ -92,7 +92,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Build
         env:
           REPO_NAME: ${{ github.event.repository.name }}
