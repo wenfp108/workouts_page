@@ -1,5 +1,6 @@
 import type { Activity } from '../types';
 import { useLocale } from '../hooks/useLocale';
+import siteMetadata from '@/static/site-metadata';
 
 type Page = 'home' | 'tracks' | 'summary';
 
@@ -20,6 +21,14 @@ export function Header({ dark, toggleTheme, page, onNavigate }: HeaderProps) {
     { label: t('summary'), page: 'summary' },
   ];
 
+  const siteTitle = siteMetadata.siteTitle.toUpperCase().replace(/\s+/g, '.');
+  const externalLinks = siteMetadata.navLinks.filter((n) =>
+    /^https?:\/\//.test(n.url)
+  );
+  const githubUrl =
+    siteMetadata.navLinks.find((n) => /github/i.test(n.name))?.url ??
+    siteMetadata.siteUrl;
+
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg)]/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
@@ -31,7 +40,8 @@ export function Header({ dark, toggleTheme, page, onNavigate }: HeaderProps) {
           title={locale === 'zh' ? '回到首页' : 'Go to home'}
           className="cursor-pointer border-0 bg-transparent p-0 text-xl font-bold text-[var(--color-text)]"
         >
-          RUNNING<span className="text-[var(--color-run)]">.</span>PAGE
+          {siteTitle}
+          <span className="text-[var(--color-run)]">.</span>
         </button>
 
         {/* Right nav */}
@@ -50,6 +60,17 @@ export function Header({ dark, toggleTheme, page, onNavigate }: HeaderProps) {
             >
               {item.label}
             </button>
+          ))}
+          {externalLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[var(--color-muted)] transition-colors hover:text-[var(--color-text)]"
+            >
+              {link.name}
+            </a>
           ))}
           <button
             aria-label={
@@ -111,7 +132,7 @@ export function Header({ dark, toggleTheme, page, onNavigate }: HeaderProps) {
             {locale === 'zh' ? 'EN' : '中'}
           </button>
           <a
-            href="https://github.com/yihong0618/running_page"
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-lg text-[var(--color-muted)] transition-colors hover:bg-[var(--color-card)] hover:text-[var(--color-text)]"
