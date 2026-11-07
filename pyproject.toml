@@ -60,3 +60,12 @@ packages = ["run_page"]
 dev = [
     "pytest>=9.0.3",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["node_modules", "dist", ".venv"]
+
+[tool.ruff.lint]
+# Keep CI stable across ruff releases: lint for real errors, not style churn.
+select = ["E4", "E7", "E9", "F"]
