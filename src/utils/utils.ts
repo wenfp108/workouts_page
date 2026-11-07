@@ -81,17 +81,63 @@ const formatPace = (d: number): string => {
   return `${minutes}'${seconds.toFixed(0).toString().padStart(2, '0')}"`;
 };
 
-const convertMovingTime2Sec = (moving_time: string): number => {
-  if (!moving_time) {
+const convertMovingTime2Sec = (
+  moving_time: string | number | null | undefined
+): number => {
+  if (moving_time === null || moving_time === undefined || moving_time === '') {
     return 0;
   }
-  // moving_time : '2 days, 12:34:56' or '12:34:56';
-  const splits = moving_time.split(', ');
-  const days = splits.length == 2 ? parseInt(splits[0]) : 0;
-  const time = splits.splice(-1)[0];
-  const [hours, minutes, seconds] = time.split(':').map(Number);
-  const totalSeconds = ((days * 24 + hours) * 60 + minutes) * 60 + seconds;
-  return totalSeconds;
+
+  if (typeof moving_time === 'number') {
+    return Number.isNaN(moving_time) ? 0 : Math.floor(moving_time);
+  }
+
+  let str = moving_time.trim();
+  let extraDaysSeconds = 0;
+
+  // '1 day, 10:44:26' / '2 days, 12:34:56'
+  if (str.includes('day')) {
+    const dayMatch = str.match(/(\d+)\s+day/);
+    if (dayMatch) {
+      extraDaysSeconds = parseInt(dayMatch[1], 10) * 86400;
+    }
+    str = str.split(',').pop()?.trim() || str;
+  }
+
+  // Epoch-like strings: '1970-01-02 10:44:26.134000'
+  if (str.includes(' ')) {
+    const parts = str.split(' ');
+    const datePart = parts[0];
+    str = parts[1];
+    const dateComponents = datePart.split('-');
+    if (dateComponents.length === 3) {
+      const dayNum = parseInt(dateComponents[2], 10);
+      if (!Number.isNaN(dayNum) && dayNum > 1) {
+        extraDaysSeconds += (dayNum - 1) * 86400;
+      }
+    }
+  }
+
+  // Strip fractional seconds: '10:44:26.134000'
+  if (str.includes('.')) {
+    str = str.split('.')[0];
+  }
+
+  const timeParts = str.split(':').map(Number);
+  if (timeParts.some(Number.isNaN)) {
+    return 0;
+  }
+
+  let seconds = 0;
+  if (timeParts.length === 3) {
+    seconds = timeParts[0] * 3600 + timeParts[1] * 60 + timeParts[2];
+  } else if (timeParts.length === 2) {
+    seconds = timeParts[0] * 60 + timeParts[1];
+  } else if (timeParts.length === 1) {
+    seconds = timeParts[0];
+  }
+
+  return Math.floor(seconds + extraDaysSeconds);
 };
 
 const formatRunTime = (moving_time: string): string => {
