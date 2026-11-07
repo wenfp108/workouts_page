@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import argparse
 import os
 import time
@@ -6,7 +7,7 @@ from config import OUTPUT_DIR
 from nike_sync import make_new_gpxs, run
 from strava_sync import run_strava_sync
 
-from utils import make_strava_client, get_strava_last_time, upload_file_to_strava
+from utils import get_strava_last_time, make_strava_client, upload_file_to_strava
 
 
 def get_to_generate_files(last_time):
@@ -56,7 +57,7 @@ if __name__ == "__main__":
             #  if you want sync all data from nike to strava drop comment the line below
             new_gpx_files = new_gpx_files[:10]
         for f in new_gpx_files:
-            upload_file_to_strava(client, f, "gpx", False)
+            upload_file_to_strava(client, f, "gpx")
 
     time.sleep(
         10

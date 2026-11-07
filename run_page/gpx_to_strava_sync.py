@@ -6,6 +6,7 @@ import gpxpy as mod_gpxpy
 from config import GPX_FOLDER
 from strava_sync import run_strava_sync
 from stravalib.exc import ActivityUploadFailed, RateLimitTimeout
+
 from utils import get_strava_last_time, make_strava_client, upload_file_to_strava
 
 
@@ -19,11 +20,11 @@ def get_to_generate_files(last_time):
     for f in file_names:
         if f.endswith(".gpx"):
             file_path = os.path.join(GPX_FOLDER, f)
-            with open(file_path, "rb") as r:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as r:
                 try:
                     gpx = mod_gpxpy.parse(r)
-                except Exception as e:
-                    print(f"Something is wring with {file_path} err: {str(e)}")
+                except Exception as e:  # noqa: BLE001
+                    print(f"Something is wring with {file_path} err: {e!s}")
                     continue
                 # if gpx file has no start time we ignore it.
                 if gpx.get_time_bounds()[0]:
@@ -33,7 +34,7 @@ def get_to_generate_files(last_time):
         for i in gpx_files
         if int(i[0].get_time_bounds()[0].timestamp()) > last_time
     }
-    return sorted(list(gpx_files_dict.keys())), gpx_files_dict
+    return sorted(gpx_files_dict.keys()), gpx_files_dict
 
 
 if __name__ == "__main__":
@@ -64,16 +65,16 @@ if __name__ == "__main__":
     for i in to_upload_time_list:
         gpx_file = to_upload_dict.get(i)
         try:
-            upload_file_to_strava(client, gpx_file, "gpx", False)
+            upload_file_to_strava(client, gpx_file, "gpx")
         except RateLimitTimeout as e:
             timeout = e.timeout
             print(f"Strava API Rate Limit Timeout. Retry in {timeout} seconds\n")
             time.sleep(timeout)
             # try previous again
-            upload_file_to_strava(client, gpx_file, "gpx", False)
+            upload_file_to_strava(client, gpx_file, "gpx")
 
         except ActivityUploadFailed as e:
-            print(f"Upload faild error {str(e)}")
+            print(f"Upload faild error {e!s}")
         # spider rule
         time.sleep(1)
 

@@ -1,4 +1,4 @@
-﻿name: Run Data Sync
+name: Run Data Sync
 
 on:
   workflow_dispatch:
@@ -65,7 +65,7 @@ jobs:
         id: setup_python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
           cache: pip
           cache-dependency-path: 'requirements.txt'
 
@@ -216,7 +216,7 @@ jobs:
         if: env.RUN_TYPE == 'tulipsport'
         run: |
           python run_page/tulipsport_sync.py ${{ secrets.TULIPSPORT_TOKEN }} --with-gpx
-
+ 
       - name: Run sync Oppo heytap script, note currently this script is not worked
         if: env.RUN_TYPE == 'oppo'
         run: |
@@ -248,9 +248,10 @@ jobs:
           python run_page/gen_svg.py --from-db --title "$TITLE_GRID" --type grid --athlete "$ATHLETE" --output assets/grid.svg --special-color yellow --special-color2 red --special-distance 10 --special-distance2 20 --use-localtime --min-distance "$MIN_GRID_DISTANCE"
           python run_page/gen_svg.py --from-db --type circular --use-localtime
           python run_page/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Workouts" --type github --github-style "align-firstday" --athlete "$ATHLETE" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5
+
         # if you want use the style:the start day of each year always aligns with Monday. please use the following script:
         # python run_page/gen_svg.py --from-db --title "${{ env.TITLE }}" --type github --github-style "align-monday" --athlete "${{ env.ATHLETE }}" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
-        # python run_page/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Running" --type github --github-style "align-monday" --athlete "${{ env.ATHLETE }}" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5
+        # python run_page/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Workouts" --type github --github-style "align-monday" --athlete "${{ env.ATHLETE }}" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5
       - name: Make month of life
         if: env.GENERATE_MONTH_OF_LIFE == 'true'
         env:
@@ -264,31 +265,8 @@ jobs:
           python run_page/gen_svg.py --from-db --type monthoflife --birth "${{env.BIRTHDAY_MONTH}}" --special-color "#f9d367"  --special-color2 "#f0a1a8" --output assets/mol_swimming.svg --use-localtime --athlete "${{env.ATHLETE}}" --title "Swimmer Month of Life" --sport-type swimming
           python run_page/gen_svg.py --from-db --type monthoflife --birth "${{env.BIRTHDAY_MONTH}}" --special-color "#f9d367"  --special-color2 "#f0a1a8" --output assets/mol_skiing.svg --use-localtime --athlete "${{env.ATHLETE}}" --title "Skier Month of Life" --sport-type skiing
 
-      - name: Check for local modifications
-        id: git_status_check
-        run: |
-          # Capture the output of git status --porcelain
-          CHANGES=$(git status --porcelain)
-
-          # Print the changes for debugging
-          echo "Git Status Output:"
-          echo "$CHANGES"
-
-          # Check if there are any changes
-          if [ -n "$CHANGES" ]; then
-            echo "::notice file=check_modifications.yml,line=28::Local modifications detected!"
-            echo "modified=true" >> "$GITHUB_OUTPUT"
-            echo "changes_output<<EOF" >> "$GITHUB_OUTPUT"
-            echo "$CHANGES" >> "$GITHUB_OUTPUT"
-            echo "EOF" >> "$GITHUB_OUTPUT"
-          else
-            echo "::notice file=check_modifications.yml,line=28::No local modifications detected."
-            echo "modified=false" >> "$GITHUB_OUTPUT"
-            echo "changes_output=" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Make year summary (only when new record fetched)
-        if: env.GENERATE_MONTH_OF_LIFE == 'true' && steps.git_status_check.outputs.modified == 'true'
+      - name: Make year summary
+        if: env.GENERATE_MONTH_OF_LIFE == 'true'
         run: |
           python run_page/gen_svg.py --from-db --type year_summary --output assets/year_summary.svg --athlete "${{ env.ATHLETE }}"
 
@@ -306,10 +284,10 @@ jobs:
       - name: Push new runs
         if: env.SAVE_DATA_IN_GITHUB_CACHE != 'true'
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
           git add .
-          git commit -m 'Add new workouts' || echo 'nothing to commit'
+          git commit -m 'update new runs' || echo 'nothing to commit'
           git push || echo 'nothing to push'
 
       - name: Set Output

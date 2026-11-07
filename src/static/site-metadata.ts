@@ -2,7 +2,7 @@ interface ISiteMetadataResult {
   siteTitle: string;
   siteUrl: string;
   description: string;
-  keywords: string;
+  keywords?: string;
   logo: string;
   navLinks: {
     name: string;

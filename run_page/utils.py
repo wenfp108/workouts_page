@@ -6,7 +6,7 @@ import pytz
 
 try:
     from rich import print
-except Exception:
+except Exception:  # noqa: S110, BLE001
     pass
 from generator import Generator
 from stravalib.client import Client
@@ -43,14 +43,14 @@ def to_date(ts):
         ts_fmts = ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"]
         for ts_fmt in ts_fmts:
             try:
-                return datetime.strptime(ts, ts_fmt)
+                return datetime.strptime(ts, ts_fmt)  # noqa: DTZ007
             except ValueError:
                 pass
         raise ValueError(f"cannot parse timestamp {ts} into date")
 
 
 def make_activities_file(
-    sql_file, data_dir, json_file, file_suffix="gpx", activity_title_dict={}
+    sql_file, data_dir, json_file, file_suffix="gpx", activity_title_dict=None
 ):
     generator = Generator(sql_file)
     generator.sync_from_data_dir(
@@ -58,19 +58,7 @@ def make_activities_file(
     )
     activities_list = generator.load()
     with open(json_file, "w") as f:
-        json.dump(activities_list, f, indent=0)
-
-
-def make_activities_file_only(
-    sql_file, data_dir, json_file, file_suffix="gpx", activity_title_dict={}
-):
-    generator = Generator(sql_file)
-    generator.sync_from_data_dir(
-        data_dir, file_suffix=file_suffix, activity_title_dict=activity_title_dict
-    )
-    activities_list = generator.loadForMapping()
-    with open(json_file, "w") as f:
-        json.dump(activities_list, f, indent=0)
+        json.dump(activities_list, f)
 
 
 def make_strava_client(client_id, client_secret, refresh_token):
@@ -104,8 +92,8 @@ def get_strava_last_time(client, is_milliseconds=True):
         if is_milliseconds:
             last_time = last_time * 1000
         return last_time
-    except Exception as e:
-        print(f"Something wrong to get last time err: {str(e)}")
+    except Exception as e:  # noqa: BLE001
+        print(f"Something wrong to get last time err: {e!s}")
         return 0
 
 

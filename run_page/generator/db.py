@@ -2,8 +2,7 @@ import datetime
 import random
 import string
 
-from config import TYPE_DICT
-from geopy.geocoders import options, Nominatim
+from geopy.geocoders import Nominatim, options
 from sqlalchemy import (
     Column,
     Float,
@@ -26,7 +25,7 @@ def randomword():
     return "".join(random.choice(letters) for i in range(4))
 
 
-options.default_user_agent = "workouts_page"
+options.default_user_agent = "running_page"
 # reverse the location (lat, lon) -> location detail
 g = Nominatim(user_agent=randomword())
 
@@ -45,7 +44,6 @@ ACTIVITY_KEYS = [
     "average_heartrate",
     "average_speed",
     "elevation_gain",
-    "source",
 ]
 
 
@@ -58,7 +56,7 @@ class Activity(Base):
     moving_time = Column(Interval)
     elapsed_time = Column(Interval)
     type = Column(String)
-    subtype = Column(String, default="")
+    subtype = Column(String)
     start_date = Column(String)
     start_date_local = Column(String)
     location_country = Column(String)
@@ -67,7 +65,6 @@ class Activity(Base):
     average_speed = Column(Float)
     elevation_gain = Column(Float)
     streak = None
-    source = Column(String)
 
     def to_dict(self):
         out = {}
@@ -90,10 +87,6 @@ def update_or_create_activity(session, run_activity):
         activity = (
             session.query(Activity).filter_by(run_id=int(run_activity.id)).first()
         )
-        type = run_activity.type
-        source = run_activity.source if hasattr(run_activity, "source") else "gpx"
-        if run_activity.type in TYPE_DICT:
-            type = TYPE_DICT[run_activity.type]
 
         current_elevation_gain = 0.0  # default value
 
@@ -123,7 +116,7 @@ def update_or_create_activity(session, run_activity):
                         )
                     )
                 # limit (only for the first time)
-                except Exception:
+                except Exception:  # noqa: BLE001
                     try:
                         location_country = str(
                             g.reverse(
@@ -132,7 +125,7 @@ def update_or_create_activity(session, run_activity):
                                 timeout=15,
                             )
                         )
-                    except Exception:
+                    except Exception:  # noqa: S110, BLE001
                         pass
 
             activity = Activity(
@@ -141,7 +134,8 @@ def update_or_create_activity(session, run_activity):
                 distance=run_activity.distance,
                 moving_time=run_activity.moving_time,
                 elapsed_time=run_activity.elapsed_time,
-                type=type,
+                type=run_activity.type,
+                subtype=run_activity.subtype,
                 start_date=run_activity.start_date,
                 start_date_local=run_activity.start_date_local,
                 location_country=location_country,
@@ -151,7 +145,6 @@ def update_or_create_activity(session, run_activity):
                 summary_polyline=(
                     run_activity.map and run_activity.map.summary_polyline or ""
                 ),
-                source=source,
             )
             session.add(activity)
             created = True
@@ -160,15 +153,15 @@ def update_or_create_activity(session, run_activity):
             activity.distance = float(run_activity.distance)
             activity.moving_time = run_activity.moving_time
             activity.elapsed_time = run_activity.elapsed_time
-            activity.type = type
+            activity.type = run_activity.type
+            activity.subtype = run_activity.subtype
             activity.average_heartrate = run_activity.average_heartrate
             activity.average_speed = float(run_activity.average_speed)
             activity.elevation_gain = current_elevation_gain
             activity.summary_polyline = (
                 run_activity.map and run_activity.map.summary_polyline or ""
             )
-            activity.source = source
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"something wrong with {run_activity.id}")
         print(str(e))
 
