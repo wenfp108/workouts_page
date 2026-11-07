@@ -2,6 +2,7 @@ interface ISiteMetadataResult {
   siteTitle: string;
   siteUrl: string;
   description: string;
+  keywords?: string;
   logo: string;
   navLinks: {
     name: string;
@@ -15,22 +16,27 @@ const getBasePath = () => {
 };
 
 const data: ISiteMetadataResult = {
-  siteTitle: 'Running Page',
-  siteUrl: 'https://yihong.run',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+  siteTitle: 'Workouts Map',
+  siteUrl: 'https://woon-workouts.pages.dev',
+  logo: 'https://i.ibb.co/LXPy8SbJ/unnamed.jpg',
   description: 'Personal site and blog',
+  keywords: 'workouts, running, cycling, riding, roadtrip, hiking, swimming',
   navLinks: [
     {
       name: 'Summary',
       url: `${getBasePath()}/summary`,
     },
     {
-      name: 'Blog',
-      url: 'https://github.com/yihong0618/gitblog',
+      name: 'Strava',
+      url: 'https://www.strava.com/athletes/135469581',
     },
     {
-      name: 'About',
-      url: 'https://github.com/yihong0618/running_page/blob/master/README-CN.md',
+      name: 'Folo',
+      url: 'https://app.follow.is/share/lists/71885160939929600',
+    },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/wenfp108/workouts_page',
     },
   ],
 };
