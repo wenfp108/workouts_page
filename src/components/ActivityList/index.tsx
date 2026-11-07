@@ -24,7 +24,7 @@ import { ACTIVITY_TOTAL, LOADING_TEXT, TYPES_MAPPING } from '@/utils/const';
 import { totalStat, yearSummaryStats } from '@assets/index';
 import { loadSvgComponent } from '@/utils/svgUtils';
 import { SHOW_ELEVATION_GAIN, HOME_PAGE_TITLE } from '@/utils/const';
-import { DIST_UNIT, M_TO_DIST } from '@/utils/utils';
+import { DIST_UNIT, M_TO_DIST, convertMovingTime2Sec } from '@/utils/utils';
 import RoutePreview from '@/components/RoutePreview';
 import { Activity } from '@/utils/utils';
 // Layout constants (avoid magic numbers)
@@ -436,11 +436,6 @@ const ActivityList: React.FC = () => {
     return activity.type.toLowerCase() === activityType;
   };
 
-  function convertTimeToSeconds(time: string): number {
-    const [hours, minutes, seconds] = time.split(':').map(Number);
-    return hours * 3600 + minutes * 60 + seconds;
-  }
-
   function groupActivitiesFn(
     intervalArg: IntervalType,
     sportTypeArg: string
@@ -503,7 +498,7 @@ const ActivityList: React.FC = () => {
           };
 
         const distance = activity.distance / M_TO_DIST;
-        const timeInSeconds = convertTimeToSeconds(activity.moving_time);
+        const timeInSeconds = convertMovingTime2Sec(activity.moving_time);
         const speed = timeInSeconds > 0 ? distance / (timeInSeconds / 3600) : 0;
 
         acc[key].totalDistance += distance;
