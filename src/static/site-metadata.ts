@@ -36,7 +36,7 @@ const data: ISiteMetadataResult = {
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/wenfp108/workouts_page',
+      url: 'https://github.com/wenfp108',
     },
   ],
 };
